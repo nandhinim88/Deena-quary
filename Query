@@ -1,0 +1,16 @@
+create table customers(cusid int(30),name varchar(30),age int(30),address varchar(30),salary int(30));
+insert into customers values(1,'rahesh',34,'cbe',5000);
+insert into customers values(2,'ram',27,'abe',7000);
+insert into customers values(3,'raj',18,'vbn',700);
+insert into customers values(4,'sam',22,'dffg',50500);
+insert into customers values(5,'som',30,'asd',5000);
+select * from customers;
+select count(*) from customers;                                                 -- COUNT  
+select count(*) from customers where age>=22;                                   -- COUNT with WHERE
+select count(distinct name) from customers;                                     -- COUNT() with DISTINCT
+select count(distinct salary) from customers;
+select name,count(*) from customers group by name;                              -- COUNT() with GROUP BY
+select age,count(*) from customers group by age;
+select salary,count(*) from customers group by salary;
+select salary,count(*) from customers group by salary having count(*)<5000;     -- COUNT() with HAVING
+Footer
